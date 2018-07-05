@@ -1,0 +1,73 @@
+/* common */
+@charset "UTF-8";
+@import "myreset";
+
+// @font-face {
+//   font-family: "RictyDiminished-Regular";
+//   src: url("/assets/font/RictyDiminished-Regular.ttf") format("truetype");
+// }
+// @font-face {
+//   font-family: "FuturaRound-Regular";
+//   src: url("/assets/font/FuturaRound-Regular.ttf") format("truetype");
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+// }
+*{
+  box-sizing: border-box;
+}
+html{
+  width: 100%;
+  // overflow-x: hidden; // iPhone:Safariでこれつけるとスクロールでエラーになる謎
+  --kiki-pink: rgb(255, 157, 238);
+  --kiki-lavender: rgb(139, 131, 218);
+  --cvl-red: rgb(171, 28, 28);
+  --cvl-grey: #eee;
+  --my-ease-out: cubic-bezier(0, 0.92, 0.44, 1);
+  --btn-01: rgb(139, 131, 218);
+
+  font-size: 14px;
+  @media screen and (min-width: 1900){ // xl
+    font-size: 16px;
+  }
+
+  body{
+    width: 100vw;
+    overflow-x: hidden;
+    // background: var(--cvl-red);
+
+    // letter-spacing: 1px;
+    color: #333;
+    text-align: center;
+  }
+}
+
+p{
+  line-height: 2;
+}
+h1, h2, p{
+  // padding: 0.4em 0;
+  line-height: 2;
+}
+.success{
+  color: turquoise;
+}
+.error{
+  color: crimson;
+}
+
+ul{
+  list-style: none;
+  li{
+    display: inline-block;
+  }
+}
+
+a{
+  text-decoration: none;
+}
+
+svg.svg-inline--fa{
+  vertical-align: -0.15em;
+  margin-right: .3em;
+}

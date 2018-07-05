@@ -1,0 +1,67 @@
+.App{
+  --Menu-width: 210px;
+  --kiki-pink: rgb(149, 213, 205);
+  --kiki-orange: rgb(255, 162, 75);
+
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  background: var(--cvl-red);
+
+  &.app-fade-in{
+    opacity: 1;
+  }
+
+  // ******************** sm: mobile layout ********************
+
+  .main{
+    position: relative;
+    width: 100%;
+
+    .page{
+      width: 100%;
+      min-height: 100%;
+
+      color: #333;
+      background: #fafafa;
+
+      // page-in
+      --page-in-delay-time: 0.5s;
+      transform-origin: 50% 50vh; // fade-in-scale の画面中央設定
+      animation:
+        page-fade-in-scale 0.8s var(--my-ease-out) var(--page-in-delay-time) both,
+        page-fade-in-opacity 0.7s ease var(--page-in-delay-time) both;
+
+      @keyframes page-fade-in-scale{
+        from{ filter: blur(11px); }
+        to{ filter: blur(0); }
+      }
+      @keyframes page-fade-in-opacity{
+        from{ opacity: 0; }
+        to{ opacity: 1; }
+      }
+
+      // page-out
+      --page-out-delay-time: 0s;
+      &.leave{
+        animation:
+          page-fade-out-scale 0.5s var(--my-ease-out) var(--page-out-delay-time) both,
+          page-fade-out-opacity 0.5s ease var(--page-out-delay-time) both;
+
+        @keyframes page-fade-out-scale{
+          // from{ transform: scaleX(1); }
+          // to{ transform: scaleX(1.05); }
+        }
+        @keyframes page-fade-out-opacity{
+          from{ opacity: 1; }
+          to{ opacity: 0; }
+        }
+      }
+
+      .page-title{
+        padding: 18vh 0;
+        font-size: 50px;
+      }
+    } // .page
+  } // .main
+} // .App

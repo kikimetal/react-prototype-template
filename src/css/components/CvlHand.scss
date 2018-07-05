@@ -1,0 +1,67 @@
+.CvlHand{
+
+  --my-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  #paint-container{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    background-blend-mode: multiply;
+    background-image:
+    linear-gradient(28deg, #fb5 46%, #fff 0),
+    linear-gradient(130deg, #fb5 28%, #fff 0),
+    linear-gradient(240deg, #fb5 26%, #fff 0);
+    transition: 1s;
+  }
+  #paint-container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #eee;
+    opacity: 0.9;
+    transition: opacity 1.6s var(--my-transition-timing-function);
+  }
+  #paint-container.finished::before{
+    opacity: 0;
+  }
+  #cvl-hand{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 99vmin;
+    height: 99vmin;
+    transform: translateY(6vh) scale(1.2);
+  }
+  @media screen and (max-width: 480px) {
+    #cvl-hand{
+      transform: translate(3vw, 6vh) scale(1.4);
+    }
+  }
+  path[d="M 251.066 102.482 C 244.964 114.249 236.388 128.537 230.065 134.86 C 228.652 136.272 235.122 143.224 235.753 144.486 C 240.052 153.084 243.915 161.4 250.192 167.675 C 250.192 167.238 256.031 161.217 256.755 160.675 C 265.209 154.334 272.092 145.337 278.631 138.797 C 279.519 137.911 276.456 137.497 275.568 136.61 C 273.61 134.651 271.994 131.519 270.318 129.172 C 265.113 121.884 261.25 114.694 256.317 107.295 C 255.532 106.117 251.066 101.169 251.066 101.169 Z"]{
+    fill-opacity: 1;
+    fill: rgb(204, 0, 0);
+    stroke-width: 1;
+    animation: cvl-fire 12s infinite;
+  }
+  @keyframes cvl-fire {
+    0%{ fill-opacity: 0; }
+    6%{ fill-opacity: 0.8; }
+    12%{ fill-opacity: 0.3; }
+    22%{ fill-opacity: 0.7; }
+    24%{ fill-opacity: 0.1; }
+    40%{ fill-opacity: 0.6; }
+    42%{ fill-opacity: 0.1; }
+    82%{ fill-opacity: 0.5; }
+    100%{ fill-opacity: 0; }
+  }
+}

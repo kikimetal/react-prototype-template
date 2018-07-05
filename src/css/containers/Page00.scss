@@ -1,0 +1,24 @@
+.Page00{
+  height: 100%;
+
+  section{
+    // margin: 15vh 0;
+    padding: 2em;
+
+    p, li{
+      padding: 0.5em 0;
+      line-height: 1.6;
+    }
+  }
+
+  .link-list{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: stretch;
+
+    &-item{
+      margin-bottom: 4px;
+    }
+  }
+}

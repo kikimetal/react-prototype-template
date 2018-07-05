@@ -1,0 +1,39 @@
+.Btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 160px;
+  padding: 0.8em calc(1em + 2vw);
+  background: var(--btn-01);
+  color: white;
+
+  border: 2px solid var(--btn-01);
+  // border-radius: 2em;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.3);
+
+  font-size: 1.1em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s var(--my-ease-out);
+
+  @media screen and (min-width: 768px){
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    // TODO: テスト
+    // background: transparent;
+    color: #333;
+    border-color: #444;
+
+    &:hover{
+      background: rgba(240, 240, 240, 1);
+      color: #999;
+    }
+  }
+}
+
+.active .Btn{
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.6;
+}

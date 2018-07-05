@@ -1,0 +1,55 @@
+.MenuTrigger{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 16px;
+  width: 92%;
+  height: 56px;
+  padding: 3px;
+
+  color: #fafafa;
+  background: linear-gradient(150deg, rgb(25, 195, 149), rgb(37, 114, 215));
+  box-shadow: 0 1px 6px 0 rgba(50, 0, 0, 0.1);
+
+  pointer-events: auto;
+  overflow: hidden;
+
+  transform-origin: center;
+  border-radius: 4px;
+
+  transition: all 0.4s ease;
+  transition-delay: 0.3s;
+
+  &.collapse{
+    transition-delay: 0s;
+    transform: scale(1.1) translateY(12px);
+    filter: blur(6px);
+    opacity: 0;
+    pointer-events: none;
+  } // collapse
+
+  &.locked{
+    pointer-events: none !important;
+  }
+
+  .left-item,
+  .right-item{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    background: rgba(60, 196, 255, 0.3);
+    border-radius: 3px;
+  }
+  .left-item{
+    width: calc(44% - 3px);
+  }
+  .right-item{
+    width: 56%;
+  }
+
+}

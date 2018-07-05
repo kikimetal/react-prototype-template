@@ -1,0 +1,34 @@
+SetEnvIf REDIRECT_HTTPS (.*) HTTPS=$1
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # case:nest-uri change this
+  RewriteBase /hpv2/
+  RewriteRule ^index\.php$ - [L]
+
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  RewriteCond %{HTTP_HOST} !^www\.
+  # case:nest-uri change this
+  RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/hpv2/$1 [R=301,L]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  # case:nest-uri change this
+  RewriteRule . /hpv2/index.php [L]
+</IfModule>
+
+#圧縮
+<ifModule mod_deflate.c>
+  <IfModule mod_filter.c>
+    AddOutputFilterByType DEFLATE text/html text/xml text/css text/plain
+    AddOutputFilterByType DEFLATE image/svg+xml application/xhtml+xml application/xml
+    AddOutputFilterByType DEFLATE application/rdf+xml application/rss+xml application/atom+xml
+    AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript application/json
+    AddOutputFilterByType DEFLATE application/x-httpd-php application/x-httpd-fastphp
+    AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-otf
+    AddOutputFilterByType DEFLATE font/truetype font/opentype
+  </IfModule>
+</ifModule>

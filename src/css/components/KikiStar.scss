@@ -1,0 +1,27 @@
+.KikiStar{
+  display: inline-block;
+  margin: 0;
+  margin-left: -0.16em;
+  width: 1em;
+  height: 1em;
+  background: transparent;
+  background-image: url("/assets/img/kiki-star/square.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  transform: scale(1.25);
+  vertical-align: -0.14em;
+
+  &.spin{
+    animation: kiki-star-spin 1.2s ease alternate infinite both;
+    @keyframes kiki-star-spin{
+      from{
+        transform: rotate(-30deg);
+      }
+      to{
+        transform: rotate(20deg);
+      }
+    }
+  }
+}

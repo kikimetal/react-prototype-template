@@ -1,0 +1,49 @@
+.PageTransitionImage{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  pointer-events: none;
+  user-select: none;
+
+  .over-text{
+    font-size: 6vmin;
+    font-weight: normal;
+    color: #eee;
+    z-index: 1;
+  }
+
+  .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    // background: rgba(0,0,0,0.2);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    // background-blend-mode: multiply;
+
+    transform-origin: center;
+    transform: scale(1);
+    transition: all 0.3s ease;
+  }
+
+  &.on .bg{
+    transition: all 3s linear;
+    transform: scale(1.1);
+  }
+  &.off .bg{
+    background-image: linear-gradient(var(--cvl-grey), var(--cvl-grey)) !important;
+  }
+}

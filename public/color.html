@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>cvl color test</title>
+    <style media="screen">
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body{
+        width: 100%;
+        color: #333;
+        font-family: serif;
+        text-align: center;
+      }
+      .set{
+        display: flex;
+        flex-flow: row;
+        width: 94%;
+        height: 100vh;
+        margin: 3% auto;
+        box-shadow: 0 1px 20px 0 rgba(0,0,0,0.3);
+      }
+      .set .c01{
+        width: 70%;
+        height: 100%;
+        background: var(--c01);
+      }
+      .set .c02{
+        width: 25%;
+        height: 100%;
+        background: var(--c02);
+      }
+      .set .c03{
+        width: 4%;
+        height: 100%;
+        background: var(--c03);
+      }
+      .set .c04{
+        width: 1%;
+        height: 100%;
+        background: var(--c04);
+      }
+      /* color */
+      body{
+        --cvl-red: rgb(159, 13, 13);
+      }
+      .set01{
+        --c01: var(--cvl-red);
+        --c02: rgb(33, 33, 33);
+        --c03: rgb(230, 158, 0);
+        --c04: #fff;
+      }
+      .set02{
+        --c01: lightgrey;
+        --c02: var(--cvl-red);
+        --c03: #333;
+        --c04: rgb(230, 158, 0);
+      }
+      .set03{
+        --c01: #eee;
+        --c02: #333;
+        --c03: var(--cvl-red);
+        --c04: rgb(230, 158, 0);
+      }
+      .set04{
+        --c01: #eee;
+        --c02: var(--cvl-red);
+        --c03: rgb(210, 148, 43);
+        --c04: rgb(29, 27, 45);
+      }
+      .set05{
+        --c01: rgb(32, 29, 34);
+        --c02: rgb(208, 206, 206);
+        --c03: var(--cvl-red);
+        --c04: rgb(214, 153, 0);
+      }
+      .set06{
+        --c01: rgb(33, 33, 33);
+        --c02: var(--cvl-red);
+        --c03: rgb(230, 158, 0);
+        --c04: #fff;
+      }
+      .set07{
+        --c01: lightgrey;
+        --c02: var(--cvl-red);
+        --c03: rgb(26, 172, 164);
+        --c04: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CVL COLOR TEST</h1>
+    <h2>set01</h2>
+    <div class="set set01">
+      <div class="c01"></div>
+      <div class="c02"></div>
+      <div class="c03"></div>
+      <div class="c04"></div>
+    </div>
+    <h2>set02</h2>
+    <div class="set set02">
+      <div class="c01"></div>
+      <div class="c02"></div>
+      <div class="c03"></div>
+      <div class="c04"></div>
+    </div>
+    <h2>set03</h2>
+    <div class="set set03">
+      <div class="c01"></div>
+      <div class="c02"></div>
+      <div class="c03"></div>
+      <div class="c04"></div>
+    </div>
+    <h2>set04</h2>
+    <div class="set set04">
+      <div class="c01"></div>
+      <div class="c02"></div>
+      <div class="c03"></div>
+      <div class="c04"></div>
+    </div>
+    <h2>set05</h2>
+    <div class="set set05">
+      <div class="c01"></div>
+      <div class="c02"></div>
+      <div class="c03"></div>
+      <div class="c04"></div>
+    </div>
+    <div class="set set06">
+      <div class="c01"></div>
+      <div class="c02"></div>
+      <div class="c03"></div>
+      <div class="c04"></div>
+    </div>
+    <div class="set set07">
+      <div class="c01"></div>
+      <div class="c02"></div>
+      <div class="c03"></div>
+      <div class="c04"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>UI test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root{
+        /* --kiki-pink: rgb(255, 204, 246);
+        --kiki-lavender: rgb(205, 199, 255); */
+        --kiki-pink: rgb(255, 157, 238);
+        /* --kiki-lavender: rgb(191, 184, 255); */
+        --kiki-lavender: rgb(139, 131, 218);
+        --my-ease-out: cubic-bezier(0.02, 0.53, 0.19, 0.99);
+        /* --my-ease-out: cubic-bezier(0.165, 0.84, 0.44, 1); */
+
+        font-family: Arial;
+        font-size: 15px;
+        line-height: 1;
+        color: #777;
+      }
+
+      /* display decoration */
+      .edge-line{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #888;
+        z-index: 999;
+        mix-blend-mode: multiply;
+        pointer-events: none;
+      }
+      .edge-line > .inner{
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        right: 4px;
+        bottom: 4px;
+        background: white;
+        border-radius: 4px;
+      }
+      .over-color{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(135deg, var(--kiki-pink), var(--kiki-lavender));
+        mix-blend-mode: overlay;
+        pointer-events: none;
+        z-index: 99999;
+      }
+
+      /* nav */
+      nav .title{
+        position: fixed;
+        top: 5vw;
+        left: 7vw;
+        text-align: left;
+      }
+      nav .title{
+        font-size: 32px;
+      }
+      nav .title .small{
+        padding-left: 0.2em;
+        font-size: 11px;
+        font-weight: lighter;
+      }
+
+      .line-container{
+        box-sizing: content-box;
+
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+
+        padding: 30px 17.5px;
+        width: 40px;
+        height: 15px;
+        border-radius: 50%;
+        box-shadow: 0 0 12px 0 rgba(0,0,0,0.18);
+        cursor: pointer;
+        transition: box-shadow 0.3s ease;
+      }
+      .line-container:hover{
+        box-shadow: none;
+      }
+      .line-container.top-right{
+        position: fixed;
+        top: 6vw;
+        left: auto;
+        right: 7vw;
+        bottom: auto;
+        align-items: flex-end;
+      }
+      .line-container.bottom-left{
+        position: fixed;
+        top: auto;
+        left: 7vw;
+        right: auto;
+        bottom: 6vw;
+        align-items: flex-start;
+        flex-flow: column-reverse;
+      }
+      .line-container > .line{
+        width: 100%;
+        height: 4px;
+        background: #888;
+        border-radius: 1px;
+        transition:
+          width 0.5s var(--my-ease-out),
+          height 0.5s var(--my-ease-out),
+          opacity 0.7s ease;
+      }
+      .line-container > .line:last-child{
+        width: 66%;
+        transition-duration: 0.5s, 0.7s, 0.9s;
+      }
+      .line-container:hover > .line{
+        width: 600%;
+        height: 3px;
+        opacity: 0;
+      }
+      .line-container:hover > .line:last-child{
+        width: 400%;
+      }
+
+      /* main */
+      main{
+        padding: 0 7vw;
+        text-align: center;
+      }
+      main section{
+        padding: 10vh 0;
+      }
+      main h1{
+        font-size: 30px;
+      }
+      main p{
+        margin: 0 auto;
+        padding: 2em 0 0 1em;
+        width: 100%;
+        max-width: 800px;
+        line-height: 1.7;
+        text-align: left;
+      }
+      main section img{
+        margin: 4rem 0;
+        width: 100%;
+        max-width: 500px;
+        border: 1px solid #999;
+        border-radius: 50%;
+        /* filter: opacity(0.8); */
+        opacity: 0.6;
+      }
+      .none{
+        border: none;
+      }
+
+      /* main entrance */
+      .entrance{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        padding: 0;
+        min-height: 100vh;
+      }
+      .entrance h1{
+        padding: 0;
+        font-size: 40px;
+      }
+      .entrance h1 .small{
+        font-size: 11px;
+        font-weight: lighter;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="edge-line">
+      <div class="inner"></div>
+    </div>
+    <div class="over-color"></div>
+
+    <nav>
+      <h1 class="title">
+        <div>Rose Darena</div>
+        <div class="small">I’ve never seen a sight like this.</div>
+      </h1>
+      <div class="line-container top-right">
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="line-container bottom-left">
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+
+    <ul>
+      <li>ABOUT</li>
+      <li>GRAFFITI</li>
+      <li>WORKS</li>
+      
+    </ul>
+
+    <main>
+      <!-- <section class="entrance">
+        <h1>
+          <div class="small">I’ve never seen a sight like this.</div>
+          <div>Rose Darena</div>
+        </h1>
+      </section> -->
+
+      <section>
+        <img class="twintail none" src="assets/img/180125_ribon-min.jpg" alt="">
+      </section>
+
+      <section>
+        <h1>Hello main content</h1>
+        <p>
+          Melodic death metal (also referred to as melodeath) is a subgenre of death metal that employs highly melodic guitar riffs, often borrowing from traditional heavy metal. The style originated and developed in Sweden (pioneered by At the Gates, Dark Tranquillity and In Flames) and the United Kingdom (pioneered by Carcass) around 1993. The Swedish death metal scene did much to popularise the style, soon centring in the "Gothenburg metal" scene.
+        </p>
+        <img class="twintail" src="assets/img/180110_twintail.jpg" alt="">
+      </section>
+
+      <section>
+        <h1>Hello main content</h1>
+        <p>
+          Melodic death metal (also referred to as melodeath) is a subgenre of death metal that employs highly melodic guitar riffs, often borrowing from traditional heavy metal. The style originated and developed in Sweden (pioneered by At the Gates, Dark Tranquillity and In Flames) and the United Kingdom (pioneered by Carcass) around 1993. The Swedish death metal scene did much to popularise the style, soon centring in the "Gothenburg metal" scene.
+        </p>
+        <img class="twintail" src="assets/img/180110_twintail.jpg" alt="">
+      </section>
+
+    </main>
+  </body>
+</html>

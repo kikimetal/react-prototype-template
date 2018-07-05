@@ -1,0 +1,71 @@
+{
+  "201611": {
+    "date": "201611",
+    "title": "香水ブランドサイト",
+    "image": "garment_v1.jpg",
+    "url": "http://kikimetal.com/portfolio/garment/v1/",
+    "skill": "HTML, CSS, jQuery, JavaScript",
+    "period": "2週間",
+    "comment": "初めてのお仕事。改善点だらけだけど、意外と色褪せてない。"
+  },
+
+  "201702": {
+    "date": "201702",
+    "title": "あそび",
+    "image": "mohumohu.jpg",
+    "url": "http://kikimetal.com/portfolio/mohumohu/",
+    "skill": "HTML, CSS, jQuery, JavaScript",
+    "period": "3日",
+    "comment": "もっと学べばいろんな表現ができそうだと実感した。"
+  },
+
+  "201704": {
+    "date": "201704",
+    "title": "協会のサイト",
+    "image": "b-assoc.jpg",
+    "url": "http://www.bulgarian-rose.or.jp",
+    "skill": "PHP, HTML, CSS, JavaScript, canvas, p5js",
+    "period": "1ヶ月",
+    "comment": "ロード時に薔薇を咲かせたかったんや...。"
+  },
+
+  "201705": {
+    "date": "201705",
+    "title": "コーポレートサイト",
+    "image": "cvl.jpg",
+    "url": "http://www.carvancl.co.jp",
+    "skill": "HTML, CSS, SVG, JavaScript",
+    "period": "1週間",
+    "comment": "トラックパッドで左手を描く苦行をクリア。"
+  },
+
+  "201709": {
+    "date": "201709",
+    "title": "香水のブランドサイト",
+    "image": "garment_v2.jpg",
+    "url": "https://www.takeruyamashita.com",
+    "skill": "PHP, HTML, CSS, SVG, JavaScript, ES2015, React, Gulp, Babel",
+    "period": "1ヶ月",
+    "comment": "SPAのエクスペリエンスに憧れ...。"
+  },
+
+  "201710": {
+    "date": "201710",
+    "title": "美容系のECサイト",
+    "image": "darena-ec.jpg",
+    "url": "https://www.rosedarena.com/ec/html/",
+    "skill": "PHP, HTML, CSS, JavaScript, EC-Cube",
+    "period": "2週間",
+    "comment": "Twigテンプレート解読するのは骨が折れた。"
+  },
+
+  "201712": {
+    "date": "201712",
+    "title": "www.kikimetal.com",
+    "image": "kikimetal.jpg",
+    "url": "https://www.kikimetal.com",
+    "skill": "PHP, HTML, CSS, JavaScript, ES2015, React, Redux, Gulp, Webpack, Babel",
+    "period": "1週間",
+    "comment": "SPAならではのスムーズなページ遷移アニメーションに血眼。"
+  }
+}

@@ -1,0 +1,115 @@
+.News{
+  width: 100%;
+  border: 6px solid rgba(0,0,0,0.1);
+  border-left: none;
+  border-right: none;
+  padding: 0.5rem 0;
+
+  .news-content{
+
+    .news-content-row{
+      padding: 0.5rem 1rem 3rem;
+
+      animation: fade-in 0.4s ease both;
+      @keyframes fade-in{
+        from{
+          height: 0;
+          opacity: 0;
+        }
+        to{
+          height: auto;
+          opacity: 1;
+        }
+      }
+
+      .date{
+        text-align: left;
+        color: #777;
+        padding: 0.3rem;
+        font-size: 15px;
+        font-weight: lighter;
+        letter-spacing: 2px;
+      }
+
+      .img{
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        user-select: none;
+      }
+
+      .title{
+        font-size: 25px;
+        line-height: 3.2;
+        padding-top: 0.4rem;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+      }
+
+      .description{
+        text-align: left;
+        padding: 1rem 0.2rem;
+        line-height: 1.8;
+      }
+
+      .link-btn{
+        display: block;
+        // width: 93%;
+        margin: 0 auto;
+        color: #666;
+        background: #fff;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 4;
+        text-decoration: none;
+        box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);
+      }
+    }
+  } // news-content
+
+  .notification{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    padding: 0 1em;
+  }
+
+  .skeleton-screen-load{
+    position: relative;
+    display: block;
+    background: #ddd;
+    border-radius: 4px;
+
+    &::before{
+      --this-width: 100%;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: var(--this-width);
+      height: 100%;
+      background-color: transparent;
+      background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.2), rgba(255,255,255,0));
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      transition: all 0.3s ease;
+
+      transform: skewX(-30deg);
+      animation: sliding-infinite 1s linear both infinite;
+      @keyframes sliding-infinite{
+        from{
+          left: calc(-1 * var(--this-width));
+        }
+        to{
+          left: calc(100% + var(--this-width));
+        }
+      }
+    }
+  }
+}

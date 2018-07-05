@@ -1,0 +1,21 @@
+.grid{
+  display: grid;
+  grid-template:
+    "header" auto
+    "main" 80vh
+    "side" 100px
+    "footer" 100px
+    / 100%;
+  height: 80vh;
+  color: white;
+  @media screen and (min-width: 600px){
+    grid-template:
+      // "header header header" auto
+      "main   main   side" 80vh
+      "footer footer footer" 100px
+      / 1fr 1fr 100px;
+  }
+  &-main{
+    grid-area: main;
+  }
+}

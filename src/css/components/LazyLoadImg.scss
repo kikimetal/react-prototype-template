@@ -1,0 +1,56 @@
+.LazyLoadImg{
+  position: relative;
+  display: block;
+  width: 100%;
+  // height: // js
+  overflow-x: hidden;
+
+  img{ // fake src
+    display: none;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    // background-image: url() // js
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .placeholder{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    // background: #fafafa;
+    // background: #333;
+    // color: #444;
+    background: linear-gradient(135deg, #222, #444);
+    color: #777;
+    font-size: 23px;
+    font-weight: lighter;
+    z-index: 1;
+    pointer-events: none;
+    // border: 5px solid #111;
+    // box-shadow: 0 0 7px 0 #222 inset;
+
+    &.hide{
+      opacity: 0;
+      visibility: hidden;
+      // transition: 0.4s ease 0.6s;
+      transition: 0.4s ease 2s;
+    }
+  }
+}

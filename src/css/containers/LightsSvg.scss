@@ -1,0 +1,36 @@
+.LightsSvg{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  pointer-events: none;
+
+  .lights-effect{
+    fill: transparent;
+    // animation: lights-effect 6s linear alternate infinite;
+    animation: lights-effect 2s linear alternate infinite;
+    @keyframes lights-effect{
+      0%{
+        fill: transparent;
+      }
+      10%{
+        fill: transparent;
+      }
+      30%{
+        fill: rgb(233, 0, 0);
+      }
+      70%{
+        fill: rgb(0, 186, 198);
+      }
+      90%{
+        fill: transparent;
+      }
+      100%{
+        fill: transparent;
+      }
+    }
+  }
+}
